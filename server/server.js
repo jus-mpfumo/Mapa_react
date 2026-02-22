@@ -4,13 +4,18 @@ const { Server } = require("socket.io");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://positive-cat-production-611e.up.railway.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://positive-cat-production-611e.up.railway.app/",
+    methods: ["GET", "POST"]
   },
 });
 
