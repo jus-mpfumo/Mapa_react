@@ -23,7 +23,7 @@ function ChangeView({ center }) {
 }
 
 // Conecta ao backend Socket.IO
-const socket = io("https://teu-backend.up.railway.app");
+const socket = io("https://mapareact-production.up.railway.app");
 
 function App() {
   const [position, setPosition] = useState(null); // tua posição
