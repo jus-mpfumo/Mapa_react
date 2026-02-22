@@ -23,7 +23,7 @@ function ChangeView({ center }) {
 }
 
 // Conecta ao backend Socket.IO
-const socket = io("http://localhost:5000");
+const socket = io(import.meta.env.VITE_API_URL);
 
 function App() {
   const [position, setPosition] = useState(null); // tua posição
