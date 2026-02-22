@@ -73,7 +73,7 @@ function App() {
         {Object.values(users).map((userCoords, index) => (
           <Marker key={index} position={userCoords} />
         ))}
-
+        <Marker position={position} />
         <ChangeView center={position} />
       </MapContainer>
     </div>
