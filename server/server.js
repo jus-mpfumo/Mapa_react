@@ -14,7 +14,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://positive-cat-production-611e.up.railway.app/",
+    origin: "https://positive-cat-production-611e.up.railway.app",
     methods: ["GET", "POST"]
   },
 });
@@ -36,5 +36,5 @@ io.on("connection", (socket) => {
 });
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log("Servidor na porta 5000", PORT);
+  console.log("Servidor a correr");
 });
