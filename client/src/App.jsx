@@ -23,7 +23,7 @@ function ChangeView({ center }) {
 }
 
 // Conecta ao backend Socket.IO
-const socket = io(import.meta.env.VITE_API_URL);
+const socket = io("https://teu-backend.up.railway.app");
 
 function App() {
   const [position, setPosition] = useState(null); // tua posição
